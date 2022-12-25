@@ -1,0 +1,13 @@
+<h2>Course List</h2>
+
+<p><em>Below are the listed courses</em></p>d
+<table>
+    <tr>
+      <th>Course</th>
+      <th>Level</th>
+    </tr>
+    <tr *ngFor="let c of courses" class="sizeup" [ngClass]="c.level === 'Intermediate' ? 'blue' : c.level === 'Beginner' ? 'green' : 'red'">
+      <td>{{c.title}}</td>
+      <td>{{c.level}}</td>
+    </tr>
+  </table>

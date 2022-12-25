@@ -1,0 +1,21 @@
+<h1>Favourite movie - {{movie}}</h1>
+
+<h2>Employee Details</h2>
+<h3>ID : {{emp.id}}</h3>
+<h3>Name : {{emp.name}}</h3>
+<h3>Salary : {{emp.salary}}</h3>
+<h3 *ngIf="emp.permanent">Permanent : Yes</h3>
+<h3>Department Id : {{emp.department.id}}</h3>
+<h3>Department Name : {{emp.department.name}}</h3>
+<h3>Skills</h3>
+<table>
+    <tr>
+      <th>Skill Id</th>
+      <th>Skill Name</th>
+    </tr>
+    <tr *ngFor="let c of skl" class="sizeup" >
+      <td>{{c.id}}</td>
+      <td>{{c.name}}</td>
+    </tr>
+  </table>
+<h3>Date of Birth : {{todayDate | date:'mediumDate'}}</h3>
